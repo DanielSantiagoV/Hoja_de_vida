@@ -57,6 +57,23 @@ Soy un desarrollador en formación con un fuerte interés en:
 
 ## 🚀 Proyectos Destacados
 
+
+### 🌟 Portafolio Personal 
+Portafolio web moderno y responsivo desarrollado con:
+- 🎨 Diseño moderno y profesional
+- 📱 Totalmente responsivo para todos los dispositivos
+- 💫 Animaciones y transiciones suaves
+- 🎯 Navegación intuitiva y accesible
+- 🌈 Paleta de colores personalizada
+- 🖼️ Iconografía SVG optimizada
+- 📊 Visualización de datos mejorada
+- 🔄 Carruseles interactivos
+- 🎮 Efectos visuales y hover
+- 📱 Optimización móvil avanzada
+
+[Ver Proyecto en GitHub](https://github.com/DanielSantiagoV/Hoja_de_vida.git)
+
+
 ### 💰 Wallet en Python
 Sistema de gestión financiera personal desarrollado en Python con:
 - 👤 Sistema de autenticación y seguridad
