@@ -125,3 +125,69 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--sombra-suave);
   }
+
+  /* Estilos de los carruseles */
+.carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Controles de navegación del carrusel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    opacity: 0.9;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--transicion);
+  }
+  
+  /* Efectos hover para controles del carrusel */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: var(--color-acento);
+    opacity: 1;
+  }
+  
+  /* Estilos específicos para cada tipo de carrusel */
+  #carouselProyectos .proyecto,
+  #carouselHabilidades .habilidad-item,
+  #carouselHobbies .hobby-item {
+    background-color: var(--color-claro);
+    border: 1px solid var(--color-bordes);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+  }
+  
+  /* Efectos hover para items de carrusel */
+  #carouselProyectos .proyecto:hover,
+  #carouselHabilidades .habilidad-item:hover,
+  #carouselHobbies .hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+  
+  /* Barras de progreso para habilidades */
+  .nivel-habilidad {
+    height: 10px;
+    background-color: var(--color-fondo);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .barra-progreso {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+  }
+  
