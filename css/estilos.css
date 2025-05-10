@@ -191,3 +191,48 @@ body {
     transition: width 1.5s ease-in-out;
   }
   
+  /* Media queries para responsive design */
+@media (max-width: 768px) {
+    /* Ajustes para dispositivos móviles */
+    body {
+      padding: 1rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: none; /* Ocultar controles en móvil */
+    }
+  
+    .proyecto,
+    .habilidad-item,
+    .hobby-item {
+      padding: 1rem;
+    }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitulo {
+    font-size: 1.2rem;
+    color: var(--color-texto);
+    margin-top: 0.5rem;
+    opacity: 0.9;
+  }
+  
+  .descripcion {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+    max-width: 600px;
+    margin: 1rem auto;
+    line-height: 1.8;
+  }
