@@ -127,3 +127,77 @@
         </div>
       </div>
     </section>
+
+    <!-- Sección Proyectos: Muestra los proyectos destacados en un carrusel -->
+    <section id="proyectos">
+      <!-- Título de la sección con emoji -->
+      <h2>🚀 Proyectos Destacados</h2>
+      <!-- Carrusel de Bootstrap para mostrar proyectos -->
+      <div id="carouselProyectos" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores del carrusel (puntos de navegación) -->
+        <div class="carousel-indicators">
+          <!-- Botón para el primer slide (activo por defecto) -->
+          <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="0" class="active"></button>
+          <!-- Botón para el segundo slide -->
+          <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="1"></button>
+          <!-- Botón para el tercer slide -->
+          <button type="button" data-bs-target="#carouselProyectos" data-bs-slide-to="2"></button>
+        </div>
+        <!-- Contenedor de slides del carrusel -->
+        <div class="carousel-inner">
+          <!-- Primer proyecto (activo por defecto) -->
+          <div class="carousel-item active">
+            <!-- Tarjeta del proyecto -->
+            <div class="proyecto">
+              <!-- Título del proyecto con emoji -->
+              <h3>💰 Wallet en Python</h3>
+              <!-- Descripción breve del proyecto -->
+              <p>Sistema de gestión financiera con JSON y conversión de moneda</p>
+              <!-- Contenedor de tecnologías usadas -->
+              <div class="tecnologias">
+                <!-- Etiquetas de tecnologías con emojis -->
+                <span class="tag">🐍 Python</span>
+                <span class="tag">📄 JSON</span>
+                <span class="tag">🔌 APIs</span>
+              </div>
+              <!-- Enlace al repositorio de GitHub -->
+              <a href="https://github.com/DanielSantiagoV/Wallet-.git" target="_blank" class="btn-proyecto">📁 Ver en GitHub</a>
+            </div>
+          </div>
+          <!-- Los demás proyectos siguen la misma estructura -->
+          <div class="carousel-item">
+            <div class="proyecto">
+              <h3>🍞 Sistema de Panadería</h3>
+              <p>Sistema de pedidos con interfaz terminal</p>
+              <div class="tecnologias">
+                <span class="tag">🐍 Python</span>
+                <span class="tag">🔄 POO</span>
+              </div>
+              <a href="https://github.com/DanielSantiagoV/Maison-Du-Pain.git" target="_blank" class="btn-proyecto">📁 Ver en GitHub</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="proyecto">
+              <h3>🎵 Gestor Musical</h3>
+              <p>Gestor de artistas y géneros musicales</p>
+              <div class="tecnologias">
+                <span class="tag">🐍 Python</span>
+                <span class="tag">🗄️ SQLite</span>
+              </div>
+              <a href="https://github.com/DanielSantiagoV/Examen_Vinasco_Daniel.git" target="_blank" class="btn-proyecto">📁 Ver en GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Controles de navegación del carrusel -->
+        <!-- Botón para ir al slide anterior -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyectos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <!-- Botón para ir al siguiente slide -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProyectos" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
