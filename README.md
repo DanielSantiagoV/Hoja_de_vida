@@ -84,28 +84,22 @@ Aplicación moderna para gestión de música con:
 ### 🛠️ Lenguajes y Herramientas
 - 🐍 Python
   - Programación Orientada a Objetos
-  - Manejo de APIs
-  - Bases de Datos (SQLite, MySQL)
   - Testing y Debugging
 - 💻 Control de Versiones
   - Git (branches, merging, resolución de conflictos)
   - GitHub (colaboración, pull requests)
 - 🔧 IDEs y Editores
   - Visual Studio Code (personalizado)
-  - PyCharm
   - Sublime Text
 - 🌐 Desarrollo Web
   - HTML5 Semántico
   - CSS3 (Flexbox, Grid, Animaciones)
   - Bootstrap 5.3.3
-- 💽 Bases de Datos
-  - SQLite
-  - MySQL básico
 - 🖥️ Terminal y Línea de Comandos
   - Comandos básicos
   - Scripts de automatización
   - Git desde terminal
-
+---
 ### 🎯 Habilidades Blandas
 - 👥 Trabajo en Equipo
   - Colaboración efectiva
@@ -123,7 +117,7 @@ Aplicación moderna para gestión de música con:
   - Priorización de tareas
   - Cumplimiento de plazos
   - Organización efectiva
-
+---
 ## 📚 Formación Académica
 
 ### 🏫 SENA (2024)
@@ -140,7 +134,7 @@ Aplicación moderna para gestión de música con:
 - 📊 Énfasis en contabilidad
 - 💰 Fundamentos financieros
 - 🎯 Base matemática sólida
-
+---
 ## 🌍 Idiomas
 
 - 🇪🇸 **Español**: Nativo
@@ -152,6 +146,7 @@ Aplicación moderna para gestión de música con:
   - Lectura técnica
   - Documentación básica
   - Mejora continua
+  ---
 
 ## 🎮 Hobbies y Pasiones
 
@@ -174,7 +169,7 @@ Aplicación moderna para gestión de música con:
 - 👨‍🍳 Cocina experimental
 - 🌮 Comida callejera
 - 🍽️ Experiencias culinarias
-
+---
 ## 📞 Contacto y Redes
 
 ### 📱 Contacto Directo
@@ -185,6 +180,7 @@ Aplicación moderna para gestión de música con:
 - 🐙 [GitHub](https://github.com/DanielSantiagoV)
 - 💼 [LinkedIn](#)
 - 🎵 [Spotify - Mi Playlist de Programación](https://open.spotify.com/playlist/6a3d9qWLg1cOyMRWoqwr16)
+---
 
 ## 📄 Recursos y Documentos
 
@@ -197,7 +193,7 @@ Aplicación moderna para gestión de música con:
 - 🎧 [Mi Playlist de Programación](https://open.spotify.com/playlist/6a3d9qWLg1cOyMRWoqwr16)
 - 📚 [Recursos de Aprendizaje](#)
 - 🛠️ [Herramientas Favoritas](#)
-
+---
 ## 💭 Filosofía Personal
 
 > "El código no es solo lo que hago. Es lo que soy. Cada línea de código es una oportunidad para crear algo extraordinario y dejar una huella en el mundo digital." - Daniel Santiago
@@ -208,6 +204,7 @@ Aplicación moderna para gestión de música con:
 - 👥 A la comunidad de desarrolladores
 - 📚 A las plataformas educativas
 - 💪 A mi familia por su apoyo
+---
 
 ## ✨ Características Destacadas del Portafolio
 
@@ -221,7 +218,7 @@ Aplicación moderna para gestión de música con:
 ✔️ 🔍 SEO optimizado para mejor visibilidad  
 ✔️ ♿ Accesibilidad mejorada  
 ✔️ 🚀 Alto rendimiento y optimización  
-
+---
 ## 🆕 Últimas Mejoras Implementadas
 
 ### 🎨 Mejoras Visuales y Animaciones
