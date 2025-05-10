@@ -9,13 +9,51 @@
 
 ## 🎯 Sobre Mí
 
+¡Hola! Soy Daniel Santiago Vinasco, un apasionado desarrollador en formación con un enfoque especial en la creación de soluciones tecnológicas innovadoras. Mi viaje en el mundo de la programación comenzó con una curiosidad innata por entender cómo funcionan las cosas y se ha convertido en una pasión por crear soluciones que impacten positivamente en la vida de las personas.
+
+### 🎓 Mi Formación
+Actualmente estoy en formación como desarrollador, combinando mis estudios técnicos en contabilidad con mi pasión por la tecnología. Esta combinación única me permite tener una perspectiva diferente al abordar problemas y crear soluciones.
+
+### 💡 Mis Intereses
+- 🐍 **Desarrollo en Python**: Me especializo en crear aplicaciones robustas y escalables, con un enfoque en la programación orientada a objetos y el manejo de bases de datos.
+- 💻 **Desarrollo Web**: Me apasiona crear interfaces web intuitivas y responsivas que ofrezcan una excelente experiencia de usuario.
+- 🤖 **Automatización**: Busco constantemente formas de optimizar procesos mediante la automatización y la programación.
+
+
+### 🎯 Mi Enfoque
+- 🔍 **Resolución de Problemas**: Me destaco en analizar situaciones complejas y encontrar soluciones efectivas.
+- 📚 **Aprendizaje Continuo**: Mantengo una actitud de aprendizaje constante, siempre buscando nuevas tecnologías y metodologías.
+- 🤝 **Trabajo en Equipo**: Valoro la colaboración y el intercambio de ideas para lograr mejores resultados.
+- 🎨 **Creatividad**: Combino la lógica de la programación con la creatividad para crear soluciones únicas.
+
+### 🌟 Mis Objetivos
+- Desarrollar soluciones tecnológicas que impacten positivamente en la sociedad
+- Crecer profesionalmente en el campo del desarrollo de software
+- Contribuir a proyectos de código abierto
+- Compartir conocimiento con la comunidad de desarrolladores
+
+### 🎮 Más Sobre Mí
+Cuando no estoy programando, disfruto de:
+- 🎮 Jugar videojuegos competitivos
+- 📸 Practicar fotografía
+- 🌍 Explorar nuevas culturas
+- 👨‍🍳 Experimentar en la cocina
+
+> Mi filosofía es simple: cada línea de código es una oportunidad para crear algo extraordinario y dejar una huella positiva en el mundo digital.
+
+---
+
+## 🎯 Sobre Mí
+
 Soy un desarrollador en formación con un fuerte interés en:
-- 🐍 Desarrollo en Python (POO, APIs, Bases de Datos)
+- 🐍 Desarrollo en Python 
 - 💻 Desarrollo web (HTML5, CSS3, Bootstrap)
 - 🎯 Resolución de problemas y pensamiento lógico
 - 📚 Aprendizaje continuo y mejora constante
 - 🤝 Trabajo en equipo y colaboración
 - 🔍 Investigación y documentación
+
+--- 
 
 ## 🚀 Proyectos Destacados
 
@@ -79,6 +117,8 @@ Aplicación moderna para gestión de música con:
 - 📊 Gráficos de habilidades
 - 🎯 Indicadores de nivel personalizados
 
+---
+
 ## 💻 Habilidades Técnicas
 
 ### 🛠️ Lenguajes y Herramientas
@@ -99,7 +139,9 @@ Aplicación moderna para gestión de música con:
   - Comandos básicos
   - Scripts de automatización
   - Git desde terminal
+
 ---
+
 ### 🎯 Habilidades Blandas
 - 👥 Trabajo en Equipo
   - Colaboración efectiva
@@ -117,7 +159,9 @@ Aplicación moderna para gestión de música con:
   - Priorización de tareas
   - Cumplimiento de plazos
   - Organización efectiva
+
 ---
+
 ## 📚 Formación Académica
 
 ### 🏫 SENA (2024)
@@ -134,7 +178,9 @@ Aplicación moderna para gestión de música con:
 - 📊 Énfasis en contabilidad
 - 💰 Fundamentos financieros
 - 🎯 Base matemática sólida
+
 ---
+
 ## 🌍 Idiomas
 
 - 🇪🇸 **Español**: Nativo
@@ -146,6 +192,7 @@ Aplicación moderna para gestión de música con:
   - Lectura técnica
   - Documentación básica
   - Mejora continua
+
   ---
 
 ## 🎮 Hobbies y Pasiones
@@ -169,7 +216,9 @@ Aplicación moderna para gestión de música con:
 - 👨‍🍳 Cocina experimental
 - 🌮 Comida callejera
 - 🍽️ Experiencias culinarias
+
 ---
+
 ## 📞 Contacto y Redes
 
 ### 📱 Contacto Directo
@@ -180,6 +229,7 @@ Aplicación moderna para gestión de música con:
 - 🐙 [GitHub](https://github.com/DanielSantiagoV)
 - 💼 [LinkedIn](#)
 - 🎵 [Spotify - Mi Playlist de Programación](https://open.spotify.com/playlist/6a3d9qWLg1cOyMRWoqwr16)
+
 ---
 
 ## 📄 Recursos y Documentos
@@ -204,6 +254,7 @@ Aplicación moderna para gestión de música con:
 - 👥 A la comunidad de desarrolladores
 - 📚 A las plataformas educativas
 - 💪 A mi familia por su apoyo
+
 ---
 
 ## ✨ Características Destacadas del Portafolio
@@ -218,7 +269,9 @@ Aplicación moderna para gestión de música con:
 ✔️ 🔍 SEO optimizado para mejor visibilidad  
 ✔️ ♿ Accesibilidad mejorada  
 ✔️ 🚀 Alto rendimiento y optimización  
+
 ---
+
 ## 🆕 Últimas Mejoras Implementadas
 
 ### 🎨 Mejoras Visuales y Animaciones
