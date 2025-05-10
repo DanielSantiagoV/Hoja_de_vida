@@ -373,3 +373,83 @@
             </div>
           </div>
         </section>
+
+        <!-- Sección de Hobbies: Muestra intereses personales en formato carrusel -->
+    <section id="hobbies">
+      <!-- Título de la sección con emoji -->
+      <h2>🎮 Hobbies y Curiosidades</h2>
+      <!-- Carrusel de Bootstrap para mostrar los hobbies -->
+      <div id="carouselHobbies" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicadores del carrusel -->
+        <div class="carousel-indicators">
+          <!-- Botones para navegar entre slides -->
+          <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carouselHobbies" data-bs-slide-to="3"></button>
+        </div>
+        <!-- Contenedor de slides del carrusel -->
+        <div class="carousel-inner">
+          <!-- Primer hobby: Gaming -->
+          <div class="carousel-item active">
+            <!-- Tarjeta del hobby -->
+            <div class="hobby-item">
+              <!-- Emoji representativo -->
+              <span class="emoji">🎮</span>
+              <!-- Título del hobby -->
+              <h3>Gaming</h3>
+              <p>Siempre listo para una partida de Fortnite, CS:GO o Valorant.</p>
+              <div class="hobby-details">
+                <span class="tag">🎯 Competitivo</span>
+                <span class="tag">🎲 Estrategia</span>
+                <span class="tag">👥 Multijugador</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-item">
+              <span class="emoji">📸</span>
+              <h3>Fotografía</h3>
+              <p>Me encanta capturar momentos de belleza a través de mi lente.</p>
+              <div class="hobby-details">
+                <span class="tag">🌅 Paisajes</span>
+                <span class="tag">👥 Retratos</span>
+                <span class="tag">🎨 Arte</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-item">
+              <span class="emoji">🌍</span>
+              <h3>Viajes</h3>
+              <p>Sueño con explorar diferentes países y culturas.</p>
+              <div class="hobby-details">
+                <span class="tag">🗺️ Aventura</span>
+                <span class="tag">🏛️ Cultura</span>
+                <span class="tag">📸 Recuerdos</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="hobby-item">
+              <span class="emoji">🍔</span>
+              <h3>Gastronomía</h3>
+              <p>Siempre listo para descubrir la próxima mejor comida callejera.</p>
+              <div class="hobby-details">
+                <span class="tag">🌮 Comida Local</span>
+                <span class="tag">👨‍🍳 Cocina</span>
+                <span class="tag">🍷 Experiencias</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHobbies" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHobbies" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
