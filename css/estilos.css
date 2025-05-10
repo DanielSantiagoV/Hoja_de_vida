@@ -2,17 +2,15 @@
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Regular.woff2') format('woff2');
-    font-weight: 400;
+    font-weight: normal;
     font-style: normal;
-    font-display: swap;
   }
   
   @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat-Bold.woff2') format('woff2');
-    font-weight: 700;
+    font-weight: bold;
     font-style: normal;
-    font-display: swap;
   }
   
   /* Variables CSS para sistema de diseño consistente */
@@ -35,7 +33,7 @@
     --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
     /* Tipografía */
-    --fuente-principal: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fuente-principal: 'Montserrat', sans-serif;
   }
   
   /* Reset de estilos para consistencia cross-browser */
@@ -44,14 +42,14 @@
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   /* Estilos base del documento */
-body {
-    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f4f4f9;
-    color: #2c3e50;
-    line-height: 1.6;
-    padding: 20px;
+  body {
+    font-family: var(--fuente-principal);
+    background-color: #fdfdfd;
+    color: var(--color-texto);
+    line-height: 1.7;
+    padding: 2rem 1rem;
     max-width: 960px;
     margin: auto;
   }
@@ -79,7 +77,7 @@ body {
   }
   
   /* Efecto hover para la foto de perfil */
-.foto-perfil:hover {
+  .foto-perfil:hover {
     transform: scale(1.05) rotate(5deg);
     border-color: var(--color-acento);
   }
@@ -91,7 +89,6 @@ body {
     border-radius: 12px;
     box-shadow: var(--sombra-suave);
     position: static;
-    top: 20px;
     z-index: 100;
     margin: 2rem 0;
     border: 1px solid var(--color-bordes);
@@ -125,9 +122,9 @@ body {
     transform: translateY(-2px);
     box-shadow: var(--sombra-suave);
   }
-
+  
   /* Estilos de los carruseles */
-.carousel {
+  .carousel {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -192,26 +189,425 @@ body {
   }
   
   /* Media queries para responsive design */
-@media (max-width: 768px) {
-    /* Ajustes para dispositivos móviles */
+  @media (max-width: 768px) {
+    /* Ajustes generales para móviles */
     body {
-      padding: 1rem;
+      padding: 0.5rem;
+      margin: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+  
+    /* Header responsivo */
+    header {
+      padding: 1.5rem 1rem;
+      margin: 0.5rem 0;
+      border-radius: 12px;
+      width: 100%;
+    }
+  
+    .foto-perfil {
+      width: 130px;
+      height: 130px;
+      margin: 1rem auto;
+      border-width: 3px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      padding: 0 1rem;
+    }
+  
+    .subtitulo {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+      padding: 0 1rem;
+    }
+  
+    .descripcion {
+      font-size: 1rem;
+      padding: 0 1.5rem;
+      margin: 1rem auto;
+      line-height: 1.6;
+    }
+  
+    /* Navegación responsiva */
+    nav {
+      position: static;
+      margin: 1rem 0;
+      padding: 0.8rem;
+      border-radius: 12px;
+      background: var(--color-claro);
+      box-shadow: var(--sombra-suave);
     }
   
     nav ul {
-      flex-direction: column;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav a {
+      padding: 0.8rem 1rem;
+      font-size: 0.95rem;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      margin: 0.2rem;
+    }
+  
+    /* Secciones responsivas */
+    section {
+      margin: 1rem 0;
+      padding: 1.2rem;
+      border-radius: 12px;
+      width: 100%;
+    }
+  
+    /* Grids responsivos */
+    .grid-habilidades,
+    .hobbies-grid,
+    .documentos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+  
+    .tarjeta,
+    .hobby-item,
+    .documento-item {
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+  
+    /* Carruseles responsivos */
+    .carousel {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0 auto;
+    }
+  
+    .carousel-item {
+      padding: 0.8rem;
     }
   
     .carousel-control-prev,
     .carousel-control-next {
-      display: none; /* Ocultar controles en móvil */
+      display: none;
     }
   
+    /* Ajustes de texto */
+    h2 {
+      font-size: 1.8rem;
+      margin: 1rem 0;
+      padding: 0 0.5rem;
+    }
+  
+    h3 {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin: 0.8rem 0;
+    }
+  
+    /* Botones responsivos */
+    .btn-proyecto,
+    .btn-documento {
+      width: auto;
+      min-width: 200px;
+      text-align: center;
+      padding: 0.8rem 1.5rem;
+      margin: 0.8rem auto;
+      display: inline-block;
+    }
+  
+    /* Footer responsivo */
+    footer {
+      margin: 1.5rem 0 0 0;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+  
+    /* Ajustes para elementos interactivos */
+    .redes-sociales {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      padding: 0.5rem;
+    }
+  
+    .red-social {
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+      min-width: 130px;
+    }
+  
+    /* Ajustes para barras de progreso */
+    .nivel-habilidad {
+      height: 8px;
+      margin: 0.8rem 0;
+    }
+  
+    /* Ajustes para tags y etiquetas */
+    .tecnologias .tag,
+    .hobby-details .tag {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+      margin: 0.3rem;
+    }
+  
+    /* Mejoras en la visualización de contenido */
     .proyecto,
     .habilidad-item,
     .hobby-item {
+      padding: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  
+    /* Ajustes para mejor legibilidad */
+    .tecnologias {
+      justify-content: center;
+      gap: 0.5rem;
+      margin: 1rem 0;
+    }
+  
+    /* Mejoras en espaciado general */
+    main {
+      padding: 0 0.5rem;
+    }
+  
+    /* Mejoras específicas para habilidades en móviles */
+    .grid-habilidades {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0.5rem;
+    }
+  
+    .tarjeta {
+      width: 100%;
+      margin: 0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background-color: var(--color-claro);
+    }
+  
+    .habilidad-item {
+      padding: 1.2rem;
+      margin: 0.5rem 0;
+    }
+  
+    .habilidades-tecnicas,
+    .habilidades-blandas {
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .habilidad,
+    .habilidad-blanda {
       padding: 1rem;
+      margin: 0.5rem 0;
+      background: var(--color-fondo);
+      border-radius: 10px;
+    }
+  
+    .habilidad-blanda {
+      padding: 1.2rem;
+    }
+  
+    .habilidad-blanda .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+  
+    .habilidad-blanda h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .habilidad-blanda p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  
+    .nivel-habilidad {
+      height: 8px;
+      margin: 0.8rem 0;
+      background-color: var(--color-bordes);
+    }
+  
+    .barra-progreso {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    }
+  
+    /* Ajustes específicos para iPhone */
+    @supports (-webkit-touch-callout: none) {
+      .grid-habilidades {
+        padding: 0.3rem;
+      }
+  
+      .tarjeta {
+        padding: 1.2rem;
+        margin: 0.3rem 0;
+      }
+  
+      .habilidad-item {
+        padding: 1rem;
+      }
+  
+      .habilidad,
+      .habilidad-blanda {
+        padding: 0.8rem;
+        margin: 0.3rem 0;
+      }
+  
+      .nivel-habilidad {
+        height: 6px;
+        margin: 0.6rem 0;
+      }
+  
+      .habilidad-blanda .emoji {
+        font-size: 2.2rem;
+      }
+  
+      .habilidad-blanda h4 {
+        font-size: 1rem;
+      }
+  
+      .habilidad-blanda p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  
+  /* Ajustes específicos para móviles pequeños */
+  @media (max-width: 480px) {
+    .foto-perfil {
+      width: 110px;
+      height: 110px;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .subtitulo {
+      font-size: 1rem;
+    }
+  
+    nav a {
+      font-size: 0.9rem;
+      min-width: 100px;
+      padding: 0.7rem 0.9rem;
+    }
+  
+    .grid-habilidades,
+    .hobbies-grid,
+    .documentos-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    section {
+      padding: 1rem;
+      margin: 0.8rem 0;
+    }
+  
+    .btn-proyecto,
+    .btn-documento {
+      width: 100%;
+      min-width: auto;
+    }
+  
+    /* Ajustes adicionales para habilidades en móviles pequeños */
+    .grid-habilidades {
+      gap: 1rem;
+    }
+  
+    .tarjeta {
+      padding: 1rem;
+    }
+  
+    .habilidad-item {
+      padding: 0.8rem;
+    }
+  
+    .habilidad,
+    .habilidad-blanda {
+      padding: 0.8rem;
+    }
+  
+    .habilidad-blanda .emoji {
+      font-size: 2rem;
+    }
+  
+    .habilidad-blanda h4 {
+      font-size: 0.95rem;
+    }
+  
+    .habilidad-blanda p {
+      font-size: 0.85rem;
+    }
+  
+    .nivel-habilidad {
+      height: 5px;
+      margin: 0.5rem 0;
+    }
+  }
+  
+  /* Ajustes para orientación landscape en móviles */
+  @media (max-width: 768px) and (orientation: landscape) {
+    .grid-habilidades,
+    .hobbies-grid,
+    .documentos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    nav ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .foto-perfil {
+      width: 100px;
+      height: 100px;
+    }
+  
+    /* Ajustes para habilidades en landscape */
+    .grid-habilidades {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  
+    .tarjeta {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .habilidad-item {
+      height: 100%;
+    }
+  
+    .habilidades-tecnicas,
+    .habilidades-blandas {
+      height: 100%;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
   }
   
@@ -236,3 +632,990 @@ body {
     margin: 1rem auto;
     line-height: 1.8;
   }
+  
+  /* CONTENIDO PRINCIPAL */
+  main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: var(--color-claro);
+    border-radius: 15px;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-bordes);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    opacity: 0.7;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--color-acento);
+    border-radius: 2px;
+  }
+  
+  /* TARJETAS DE HABILIDADES */
+  /* Habilidades */
+  .grid-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .tarjeta {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 10px;
+    transition: var(--transicion);
+    border: 1px solid var(--color-bordes);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .tarjeta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--color-primario), var(--color-acento));
+    opacity: 0;
+    transition: var(--transicion);
+    z-index: 1;
+  }
+  
+  .tarjeta:hover::before {
+    opacity: 0.1;
+  }
+  
+  .tarjeta > * {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Iconos */
+  .icono-habilidad {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    transition: var(--transicion);
+  }
+  
+  .icono-habilidad:hover {
+    transform: scale(1.1) rotate(10deg);
+    filter: drop-shadow(0 0 5px var(--color-primario));
+  }
+  
+  /* Contacto */
+  .info-contacto {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--color-texto);
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .red-social {
+    color: var(--color-texto);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transicion);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .red-social:hover {
+    color: var(--color-primario);
+    border-color: var(--color-primario);
+    transform: translateY(-3px);
+  }
+  
+  /* Estilos para la Música */
+  .musica-contenido {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-secundario);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .playlist-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    background-color: #1DB954; /* Color verde de Spotify */
+    color: var(--color-fondo);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transicion);
+    border: 1px solid #1DB954;
+    font-size: 1.1rem;
+  }
+  
+  .playlist-link:hover {
+    transform: translateY(-3px);
+    background-color: transparent;
+    color: #1DB954;
+  }
+  
+  .spotify-icon {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
+  @media (max-width: 768px) {
+    .playlist-link {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .spotify-icon {
+        width: 20px;
+        height: 20px;
+    }
+  }
+  
+  /* Estilos para la Historia */
+  .historia-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-secundario);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .historia-texto {
+    text-align: center;
+  }
+  
+  .descarga-historia {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transition: var(--transicion);
+    border: 1px solid var(--color-primario);
+  }
+  
+  .descarga-historia:hover {
+    background-color: transparent;
+    color: var(--color-primario);
+    transform: translateY(-3px);
+  }
+  
+  .historia-puntos {
+    text-align: left;
+    margin-top: 2rem;
+  }
+  
+  .historia-puntos p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    position: relative;
+    padding-left: 2.5rem;
+  }
+  
+  .historia-puntos p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+  
+  /* Estilos para Hobbies */
+  .hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .hobby-item {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .hobby-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .hobby-item:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-fondo);
+  }
+  
+  .hobby-item .emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    color: var(--color-primario);
+  }
+  
+  .hobby-item:hover .emoji {
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  .hobby-item h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+  }
+  
+  .hobby-item p {
+    color: var(--color-texto);
+    line-height: 1.6;
+  }
+  
+  /* Estilos para la sección de Documentos */
+  .documentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .documento-item {
+    background-color: var(--color-secundario);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+    text-align: center;
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .documento-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-fondo);
+  }
+  
+  .documento-item h3 {
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+  }
+  
+  .documento-item p {
+    color: var(--color-texto);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .btn-documento {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transicion);
+    border: 1px solid var(--color-primario);
+  }
+  
+  .btn-documento:hover {
+    background-color: transparent;
+    color: var(--color-primario);
+    transform: translateY(-3px);
+  }
+  
+  .btn-documento .icono {
+    width: 24px;
+    height: 24px;
+    color: var(--color-fondo);
+  }
+  
+  .btn-documento:hover .icono {
+    color: var(--color-primario);
+  }
+  
+  /* Media Queries para la sección de Documentos */
+  @media (max-width: 768px) {
+    .documentos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+  
+    .documento-item {
+        padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .documento-item {
+        padding: 1rem;
+    }
+  
+    .btn-documento {
+        padding: 0.5rem 1rem;
+    }
+  } 
+  
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: var(--color-blanco);
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: var(--sombra-suave);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.2), transparent);
+    z-index: 1;
+  }
+  
+  /* Botones */
+  .btn-proyecto, .btn-documento {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primario);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: var(--transicion);
+    margin-top: 1rem;
+    font-weight: bold;
+    border: 1px solid var(--color-primario);
+  }
+  
+  .btn-proyecto:hover, .btn-documento:hover {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    transform: translateY(-3px);
+  }
+  
+  /* ANIMACIONES */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilos para la Cita */
+  .cita-contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--color-secundario);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    border: 1px solid var(--color-bordes);
+  }
+  
+  .cita {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--color-texto);
+    position: relative;
+    padding: 2rem;
+  }
+  
+  .cita::before,
+  .cita::after {
+    content: '"';
+    font-size: 4rem;
+    color: var(--color-primario);
+    opacity: 0.3;
+    position: absolute;
+  }
+  
+  .cita::before {
+    top: -1rem;
+    left: 1rem;
+  }
+  
+  .cita::after {
+    bottom: -2rem;
+    right: 1rem;
+  }
+  
+  .cita footer {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-primario);
+    font-style: italic;
+  }
+  
+  #carouselProyectos {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .carousel-item {
+    padding: 20px;
+  }
+  
+  .carousel-item .proyecto {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 10%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: -25px;
+  }
+  
+  .carousel-control-next {
+    right: -25px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  .carousel-indicators {
+    margin-bottom: 0;
+  }
+  
+  .carousel-indicators button {
+    background-color: #666;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .carousel-indicators button.active {
+    background-color: var(--color-primario);
+  }
+  
+  #carouselHobbies {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  #carouselHobbies .hobby-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  #carouselHobbies .emoji {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  #carouselHobbies .hobby-details {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  #carouselHobbies .tag {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transicion);
+  }
+  
+  #carouselHobbies .tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #carouselHobbies .carousel-control-prev,
+  #carouselHobbies .carousel-control-next {
+    width: 10%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #carouselHobbies .carousel-control-prev {
+    left: -25px;
+  }
+  
+  #carouselHobbies .carousel-control-next {
+    right: -25px;
+  }
+  
+  #carouselHobbies .carousel-control-prev-icon,
+  #carouselHobbies .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  #carouselHobbies .carousel-indicators {
+    margin-bottom: 0;
+  }
+  
+  #carouselHobbies .carousel-indicators button {
+    background-color: #666;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  #carouselHobbies .carousel-indicators button.active {
+    background-color: var(--color-primario);
+  }
+  
+  #carouselHabilidades {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .habilidad-item {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+  }
+  
+  .habilidades-tecnicas,
+  .habilidades-blandas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .habilidad,
+  .habilidad-blanda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--color-fondo);
+    border-radius: 8px;
+    transition: var(--transicion);
+  }
+  
+  .habilidad:hover,
+  .habilidad-blanda:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .habilidad-blanda {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .habilidad-blanda .emoji {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .habilidad-blanda h4 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+  }
+  
+  .habilidad-blanda p {
+    font-size: 0.9rem;
+    color: var(--color-texto);
+    opacity: 0.8;
+  }
+  
+  .nivel-habilidad {
+    flex: 1;
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-left: 1rem;
+  }
+  
+  .barra-progreso {
+    height: 100%;
+    background: var(--color-primario);
+    border-radius: 4px;
+    transition: width 1s ease-in-out;
+  }
+  
+  #carouselHabilidades .carousel-control-prev,
+  #carouselHabilidades .carousel-control-next {
+    width: 10%;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #carouselHabilidades .carousel-control-prev {
+    left: -25px;
+  }
+  
+  #carouselHabilidades .carousel-control-next {
+    right: -25px;
+  }
+  
+  #carouselHabilidades .carousel-control-prev-icon,
+  #carouselHabilidades .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    padding: 10px;
+  }
+  
+  #carouselHabilidades .carousel-indicators {
+    margin-bottom: 0;
+  }
+  
+  #carouselHabilidades .carousel-indicators button {
+    background-color: #666;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  #carouselHabilidades .carousel-indicators button.active {
+    background-color: var(--color-primario);
+  }
+  
+  /* ───────────── CARRUSELES ───────────── */
+  .carousel {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .carousel-item {
+    padding: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-primario);
+    border-radius: 50%;
+    opacity: 0.9;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: var(--transicion);
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: var(--color-acento);
+    opacity: 1;
+  }
+  
+  .carousel-control-prev {
+    left: -25px;
+  }
+  
+  .carousel-control-next {
+    right: -25px;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .carousel-indicators {
+    margin-bottom: -1rem;
+  }
+  
+  .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-primario);
+    opacity: 0.5;
+    margin: 0 5px;
+    transition: var(--transicion);
+  }
+  
+  .carousel-indicators button.active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* Estilos específicos para cada carrusel */
+  #carouselProyectos .proyecto,
+  #carouselHabilidades .habilidad-item,
+  #carouselHobbies .hobby-item {
+    background-color: var(--color-claro);
+    border: 1px solid var(--color-bordes);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
+  }
+  
+  #carouselProyectos .proyecto:hover,
+  #carouselHabilidades .habilidad-item:hover,
+  #carouselHobbies .hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-media);
+  }
+  
+  /* Proyectos */
+  .proyecto h3 {
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+  
+  .tecnologias .tag {
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transicion);
+  }
+  
+  .tecnologias .tag:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-primario);
+    color: var(--color-claro);
+  }
+  
+  .btn-proyecto {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: var(--color-claro);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    transition: var(--transicion);
+    font-weight: 500;
+    border: 2px solid var(--color-primario);
+  }
+  
+  .btn-proyecto:hover {
+    background-color: transparent;
+    color: var(--color-primario);
+    transform: translateY(-3px);
+  }
+  
+  /* Habilidades */
+  .habilidad-item {
+    background: var(--color-claro);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: var(--transicion);
+  }
+  
+  .habilidad-item h3 {
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+  
+  .nivel-habilidad {
+    height: 10px;
+    background-color: var(--color-fondo);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 1rem 0;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .barra-progreso {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+    border-radius: 5px;
+    transition: width 1.5s ease-in-out;
+  }
+  
+  /* Hobbies */
+  .hobby-item {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .hobby-item .emoji {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: var(--transicion);
+  }
+  
+  .hobby-item:hover .emoji {
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  .hobby-details {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .hobby-details .tag {
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transicion);
+    border: 1px solid var(--color-primario);
+  }
+  
+  .hobby-details .tag:hover {
+    background-color: var(--color-primario);
+    color: var(--color-claro);
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-suave);
+  }
+  
