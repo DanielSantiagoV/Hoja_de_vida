@@ -18,6 +18,8 @@
 
 <!-- Cuerpo del documento que contiene todo el contenido visible -->
 <body>
+  <!-- Modo Oscuro para el viewport -->
+  <button id="modoOscuroBtn">🌙 Activar modo oscuro</button>
   <!-- Header: Sección principal de presentación personal -->
   <header>
     <!-- Imagen de perfil circular con efecto hover y sombra -->
@@ -578,6 +580,20 @@
     </section>
   </main>
 
+  <script>
+    const boton = document.getElementById('modoOscuroBtn');
+  
+    boton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+  
+      if (document.body.classList.contains('dark-mode')) {
+        boton.textContent = '☀️ Modo claro';
+      } else {
+        boton.textContent = '🌙 Activar modo oscuro';
+      }
+    });
+  </script>
+  
   <!-- Pie de página con información de copyright -->
   <footer>
     <!-- Texto de copyright con el año y nombre -->
