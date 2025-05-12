@@ -1652,3 +1652,50 @@
     }
   }
   
+
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --nav-bg: #f8f9fa;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  nav {
+    background-color: var(--nav-bg);
+    transition: background-color 0.4s ease;
+  }
+  
+  /* Modo oscuro: cambia variables */
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e6e6e6;
+    --nav-bg: #1a1a1a;
+  }
+  
+  /* Estilo del botón modo oscuro */
+  #modoOscuroBtn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo cuando se activa el modo oscuro */
+  body.dark-mode #modoOscuroBtn {
+    background-color: #e6e6e6;
+    color: #121212;
+  }
+  
+  
